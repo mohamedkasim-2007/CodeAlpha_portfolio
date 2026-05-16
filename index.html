@@ -1,0 +1,389 @@
+# Portfolio Website (Single File Project)
+
+Save this file as `index.html` and open it in your browser.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Kasim J | Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:#f4f4f4;
+            color:#333;
+        }
+
+        header{
+            background:#111827;
+            color:white;
+            padding:20px 10%;
+            position:fixed;
+            width:100%;
+            top:0;
+            z-index:1000;
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        nav h1{
+            font-size:28px;
+        }
+
+        nav ul{
+            list-style:none;
+            display:flex;
+            gap:20px;
+        }
+
+        nav ul li a{
+            color:white;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:#38bdf8;
+        }
+
+        section{
+            min-height:100vh;
+            padding:120px 10% 60px;
+        }
+
+        .hero{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            background:linear-gradient(to right,#0f172a,#1e293b);
+            color:white;
+        }
+
+        .hero img{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            object-fit:cover;
+            border:5px solid white;
+            margin-bottom:20px;
+            transition:0.4s;
+        }
+
+        .hero img:hover{
+            transform:scale(1.05);
+        }
+
+        .hero h2{
+            font-size:45px;
+            margin-bottom:10px;
+        }
+
+        .hero p{
+            font-size:20px;
+            margin-bottom:20px;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:12px 24px;
+            background:#38bdf8;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#0284c7;
+            transform:translateY(-3px);
+        }
+
+        h2.section-title{
+            text-align:center;
+            margin-bottom:40px;
+            font-size:36px;
+            color:#111827;
+        }
+
+        .about-content{
+            text-align:center;
+            line-height:1.8;
+            font-size:18px;
+        }
+
+        .skills-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+            gap:20px;
+        }
+
+        .skill-card{
+            background:white;
+            padding:25px;
+            border-radius:12px;
+            text-align:center;
+            box-shadow:0 5px 10px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .skill-card:hover{
+            transform:translateY(-8px);
+        }
+
+        .projects-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+        }
+
+        .project-card{
+            background:white;
+            padding:20px;
+            border-radius:12px;
+            box-shadow:0 5px 10px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .project-card:hover{
+            transform:scale(1.03);
+        }
+
+        .project-card h3{
+            margin-bottom:10px;
+        }
+
+        .resume{
+            text-align:center;
+        }
+
+        .contact-container{
+            text-align:center;
+            line-height:2;
+            font-size:18px;
+        }
+
+        footer{
+            background:#111827;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        @media(max-width:768px){
+            nav{
+                flex-direction:column;
+                gap:10px;
+            }
+
+            .hero h2{
+                font-size:32px;
+            }
+
+            .hero p{
+                font-size:18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Portfolio</h1>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero" id="home">
+        <img src="photo.jpg" alt="Profile Photo" width="200">
+
+        <h2>Mohamed Kasim J</h2>
+
+        <p>First Year CSE Student | Web Developer | Problem Solver</p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+    </section>
+
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+            <p>
+                Hello! I am Mohamed Kasim J, a passionate Computer Science Engineering student
+                from Panimalar Engineering College, Chennai.
+                I enjoy building websites, solving coding problems, and learning new technologies.
+                I have experience in HTML, CSS, JavaScript, C, and Python.
+            </p>
+        </div>
+    </section>
+
+
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">C Programming</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Problem Solving</div>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+                <h3>Music Player</h3>
+                <p>
+                    Created a responsive music player using HTML, CSS, and JavaScript.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Image Gallery</h3>
+                <p>
+                    Developed an image gallery with hover effects and navigation buttons.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>
+                    Designed a clean and responsive personal portfolio website.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="resume">
+        <h2 class="section-title">Resume</h2>
+
+        <div class="resume">
+            <p>Click below to download my resume.</p>
+            <br>
+
+            <a href="resume.pdf" download class="btn">Download Resume</a>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-container">
+            <p><strong>Email:</strong> yourmail@gmail.com</p>
+            <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+            <p><strong>Location:</strong> Chennai, Tamil Nadu</p>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2026 Mohamed Kasim J | All Rights Reserved</p>
+    </footer>
+
+
+    <script>
+        const sections = document.querySelectorAll("section");
+
+        window.addEventListener("scroll", () => {
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.clientHeight;
+
+                if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight){
+                    section.style.opacity = "1";
+                    section.style.transform = "translateY(0px)";
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            section.style.opacity = "0";
+            section.style.transform = "translateY(50px)";
+            section.style.transition = "all 0.8s ease";
+        });
+    </script>
+
+</body>
+</html>
+```
+
+# How to Use
+
+1. Create a folder.
+2. Create a file named `index.html`.
+3. Copy the entire code and paste it.
+4. Save the file.
+5. Double-click `index.html` to open it in your browser.
+
+# Add Your Photo
+
+* Add your image inside the same folder.
+* Rename it as:
+
+```text
+your-photo.jpg
+```
+
+# Add Resume
+
+* Add your resume PDF inside the same folder.
+* Rename it as:
+
+```text
+resume.pdf
+```
+
+# Upload to GitHub Pages
+
+1. Create a GitHub repository.
+2. Upload the `index.html`, photo, and resume.
+3. Go to:
+
+```text
+Settings → Pages
+```
+
+4. Select:
+
+```text
+Deploy from Branch → main → root
+```
+
+5. Click Save.
+
+Your portfolio website will be live online.
